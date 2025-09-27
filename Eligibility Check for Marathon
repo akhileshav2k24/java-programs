@@ -1,0 +1,20 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int totalPlayers = sc.nextInt();
+        int playersPerTeam = sc.nextInt();
+
+        // Calculate number of teams and leftover players
+        int totalTeams = totalPlayers / playersPerTeam;
+        int leftOut = totalPlayers % playersPerTeam;
+
+        // Print results
+        System.out.println("Total teams formed: " + totalTeams);
+        System.out.println("Players left out: " + leftOut);
+
+        sc.close();
+    }
+}
